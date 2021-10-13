@@ -10,7 +10,7 @@ Install:
 npm i cypress-websocket-server
 ```
 
-Add `cy.setWebsocketWorkflow` command by adding the following to `cypress/support/index.js`:
+Add `cy.setWebsocketWorkflow()` command by adding the following to `cypress/support/index.js`:
 
 ```javascript
 import { addCommand } from "cypress-websocket-server";
@@ -29,13 +29,13 @@ module.exports = (on, config) => {
 
 ## Workflow file format
 
-The fixture file JSON should contains an array of objects with properties:
+The fixture `.json` file should contain an array of objects with properties:
 
 - `type`:
   - `server`: a message that should be sent by the server
   - `client`: a message the server expects from the client
   - `reconnect`: an expected client reconnection
-- `payload` (optional): message data, can be any object type
+- `payload` (optional): message data, can be of any object type
 
 ## Example workflow
 
@@ -51,7 +51,7 @@ describe("Trigger WS workflow on button click", () => {
 });
 ```
 
-Being the contents of `expected-workflow.json` in fixtures folder:
+Being the content of `expected-workflow.json`, in fixtures folder:
 
 ```json
 [
@@ -79,10 +79,10 @@ Being the contents of `expected-workflow.json` in fixtures folder:
 The server will listen to any connections in `ws://localhost:1999` and:
 
 - Send payload `{ "message": "connected" }` on client connection
-- Expect client message containing payload `{ "action": "get-user" }`
-- Send user info in payload
+- Expect client message with payload `{ "action": "get-user" }`
+- Send back user info
 
-If the client doesn't send the expected message in the right order, a error will be printed to Cypress console.
+If the client doesn't send the expected message in the right order, or send additional messages, an error will be printed to Cypress console.
 
 ## License
 

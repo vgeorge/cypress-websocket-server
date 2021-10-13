@@ -1,6 +1,6 @@
 {
   "name": "cypress-websocket-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Cypress plugin to mock a websocket server during tests",
   "main": "index.js",
   "scripts": {},
