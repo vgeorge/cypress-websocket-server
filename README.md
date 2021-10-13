@@ -1,6 +1,6 @@
-# cypress-websocket-mock
+# cypress-websocket-server
 
-Cypress plugin to mock websocket workflows.
+Cypress plugin to run a websocket server during tests.
 
 ## License
 
