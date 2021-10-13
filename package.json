@@ -1,6 +1,6 @@
 {
   "name": "cypress-websocket-server",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Cypress plugin to mock a websocket server during tests",
   "main": "index.js",
   "scripts": {},
@@ -11,9 +11,18 @@
     "plugin"
   ],
   "author": "Vitor George",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "lodash.isequal": "^4.5.0",
     "ws": "^8.2.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vgeorge/cypress-websocket-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vgeorge/cypress-websocket-server/issues"
+  },
+  "homepage": "https://github.com/vgeorge/cypress-websocket-server#readme"
 }
